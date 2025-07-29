@@ -1,7 +1,7 @@
 // src/routes/+page.js
 export async function load({ fetch }) {
   try {
-    const res = await fetch('http://localhost:5050/market/');
+    const res = await fetch('https://bareeyapiendpoint.azurewebsites.net/market/');
 
     if (!res.ok) {
       throw new Error(`Failed to fetch: ${res.status}`);

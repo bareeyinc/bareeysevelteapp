@@ -1,0 +1,13 @@
+<script>
+
+let name = "maaji";
+let counter = 0;
+</script>
+
+<h1>welcome my {name} {counter}</h1>
+
+<button on:click={() => {
+    counter++;
+
+    name = "maaji neh";
+}}>CLICK me</button>

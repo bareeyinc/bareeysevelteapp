@@ -1,0 +1,17 @@
+<script>
+let malingras = ["ussy", "shehu", "madini", "muker"];
+</script>
+
+<h1>welcome my {name} {counter}</h1>
+
+<button on:click={() => {
+    counter++;
+
+    name = "maaji neh";
+}}>CLICK me</button>
+
+<ul>
+    {#each malingras as ij}
+       <li>{ij}</li>
+    {/each}
+</ul>

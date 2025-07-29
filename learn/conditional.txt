@@ -1,0 +1,13 @@
+<script>
+	let isLoggedIn = false;
+</script>
+
+{#if isLoggedIn}
+	<p>Welcome back!</p>
+{:else}
+	<p>Please log in.</p>
+{/if}
+
+<button on:click={() => isLoggedIn = !isLoggedIn}>
+	Toggle Login
+</button>

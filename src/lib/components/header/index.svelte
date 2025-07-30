@@ -5,6 +5,7 @@
     import { onMount } from 'svelte';
     import Desktop from './desktop.svelte';
     import Mobile from './mobile.svelte';
+    import { navigating } from '$app/stores';
   
     let isMobile = false;
   
@@ -33,7 +34,10 @@
     
   </script>
   
-  {#if screenWidth < 768}
+  {#if screenWidth == 0}
+    <!-- Loading bar -->
+    <div class="loading-bar" class:visible={$navigating} />
+  {:else if screenWidth < 768}
     <Mobile />
   {:else}
     <Desktop />

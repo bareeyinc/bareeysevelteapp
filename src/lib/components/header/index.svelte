@@ -35,7 +35,7 @@
   </script>
   
   {#if screenWidth == 0}
-    <!-- Loading bar -->
+    <!-- Loading bar oks-->
     <div class="loading-bar" class:visible={$navigating} />
   {:else if screenWidth < 768}
     <Mobile />

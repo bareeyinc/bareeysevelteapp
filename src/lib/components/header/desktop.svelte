@@ -34,6 +34,13 @@
             <span class="link-header"> Privacy Policy</span>
         </div>
     </div>
+    {:else if pathname === "/settings/remove"}
+    <div class="privacy-policy">
+        <div class="header-link">
+            <span class="svg-header"><Shield size="20" /> </span>
+            <span class="link-header"> Account Settings</span>
+        </div>
+    </div>
     {:else}
         <div class="header-navs">
             <a href="/" class:selected={"/" === '/'} style="{pathname === '/' ? 'border-bottom:1px solid black;padding-bottom:5px;font-weight:bold;':''}">

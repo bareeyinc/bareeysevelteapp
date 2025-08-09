@@ -12,6 +12,8 @@ export async function load({ fetch }) {
 
     let dataLists = [];
 
+    console.log(`----- ${feed} \n`);
+
     if(feed["success"] == true){
       if(feed["data"] != null){
         dataLists = feed["data"];

@@ -20,7 +20,7 @@
         loading = true;
 
         try {
-            const res = await fetch("http://localhost:5050/removeaccount/", {
+            const res = await fetch("https://bareeyapiendpoint.azurewebsites.net/removeaccount/", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ username, password })

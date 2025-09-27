@@ -31,7 +31,7 @@
      * not necessarily fixed at the bottom of the screen (unlike your bottom-nav).
      */
     .app-footer {
-      
+        background-color: #f9f9f9;
         color: #333;
         padding: 30px 20px;
         margin-top: 20px;

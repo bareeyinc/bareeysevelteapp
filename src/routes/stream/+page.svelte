@@ -93,7 +93,7 @@
             {#each Object.entries(ij) as [key, value]}
                 <div style="width: {screenWidth > 500 ? 400 : screenWidth - 50}px;" class="stream-info">
                     <div class="stream">
-                        <video data-hls={value["stream"]} controls width="100%" height="auto"></video>
+                        <video data-hls=http://files.bareey.com/{value["stream"]} controls width="100%" height="auto"></video>
                     </div>
 					<dic class="stream-user-all">
 						<div class="stream-user">
@@ -103,7 +103,7 @@
 								</div>
 							{:else}
 								<div class="stream-image">
-									<span>{@html `<img style="height:40px;width:40px;border-radius:100px;object-fit: cover;" src="${value["user"]["profilepic"]}" />` }</span>
+									<span>{@html `<img style="height:40px;width:40px;border-radius:100px;object-fit: cover;" src="http://files.bareey.com/${value["user"]["profilepic"]}" />` }</span>
 								</div>
 							{/if}
 							

@@ -73,7 +73,7 @@
 								</div>
 							{:else}
 								<div class="post-image">
-									<span>{@html `<img style="height:40px;width:40px;border-radius:100px;object-fit: cover;" src="${value["user"]["profilepic"]}" />` }</span>
+									<span>{@html `<img style="height:40px;width:40px;border-radius:100px;object-fit: cover;" src="http://files.bareey.com/${value["user"]["profilepic"]}" />` }</span>
 								</div>
 							{/if}
 							

@@ -139,7 +139,7 @@
                                     <button class="btn-prev-market" on:click={() => {
                                         prev(i,files.split("/")[files.split("/").length -1].split(".")[0], value["media"]["files"]["blob"]);
                                     }}>◀</button>
-                                    <span><img src="{files}" style="width:100%;height:170px;" /></span>
+                                    <span><img src="http://files.bareey.com/{files}" style="width:100%;height:170px;" /></span>
                                     <button class="btn-next-market" on:click={() => {
                                         next(i,files.split("/")[files.split("/").length -1].split(".")[0], value["media"]["files"]["blob"]);
                                     }}>▶</button>
@@ -153,7 +153,7 @@
                                     <button class="btn-prev-market" on:click={() => {
                                         prev(i,files.split("/")[files.split("/").length -1].split(".")[0], value["media"]["files"]["blob"]);
                                     }}>◀</button>
-                                    <span><img src="{files}" style="width:100%;height:170px;" /></span>
+                                    <span><img src="http://files.bareey.com/{files}" style="width:100%;height:170px;" /></span>
                                     <button class="btn-next-market" on:click={() => {
                                         next(i,files.split("/")[files.split("/").length -1].split(".")[0], value["media"]["files"]["blob"]);
                                     }}>▶</button>
@@ -174,7 +174,7 @@
                                 </div>
                             {:else}
                                 <div class="market-image">
-                                    <span>{@html `<img style="height:22px;width:22px;border-radius:100px;object-fit: cover;" src="${value["user"]["profilepic"]}" />` }</span>
+                                    <span>{@html `<img style="height:22px;width:22px;border-radius:100px;object-fit: cover;" src="http://files.bareey.com/${value["user"]["profilepic"]}" />` }</span>
                                 </div>
                             {/if}
     

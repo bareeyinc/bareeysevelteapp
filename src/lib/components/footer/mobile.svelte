@@ -17,6 +17,7 @@
             <a href="/check/privacy#privacy-policy">Privacy Policy</a>
             <a href="/check/privacy#terms">Terms & Conditions</a>
             <a href="/check/privacy#about-bareey">About {appName}</a>
+            <a href="mailto:bareeyinc@gmail.com">Support & Contact</a>
         </div>
 
         <div class="footer-copyright">

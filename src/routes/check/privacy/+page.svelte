@@ -64,7 +64,9 @@
     <div class="bareey-policy-nav">
         <a href="#terms">Terms</a>
         <a href="#privacy-policy">Privacy Policy</a>
+        <a href="#refund-policy">Refund Policy</a>
         <a href="#about-bareey">About Bareey</a>
+        <a href="#contact">Contact</a>
     </div>
 
     <section id="terms" class="bareey-policy-section">
@@ -144,6 +146,22 @@
         </div>
     </section>
 
+    <section id="refund-policy" class="bareey-policy-section">
+        <h2>Refund Policy</h2>
+        <p>
+            Bareey values transparency and customer satisfaction. Refunds are processed only for
+            transactions completed through our official Bareey platform or verified Bareey merchants.
+        </p>
+        <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>Refund requests must be submitted within <b>7 days</b> of the transaction date.</li>
+            <li>Approved refunds are credited back to the original payment method within <b>5–10 business days</b>.</li>
+            <li>Refunds may not apply to digital or consumable content once accessed or used.</li>
+            <li>To request a refund, please email us at <b>bareeyinc@gmail.com</b> with your transaction details.</li>
+        </ul>
+    </section>
+
+    
+
     <section id="about-bareey" class="bareey-policy-section">
         <h2>About Bareey</h2>
         <p>
@@ -151,5 +169,17 @@
             It features a fast messaging system that enables users to interact, post, manage, buy, sell, and explore communities.
             Bareey bridges the gap between fun, business, and communication, making it a powerful and modern tool for everyone.
         </p>
+    </section>
+
+    <section id="contact" class="bareey-policy-section">
+        <h2>Contact Information</h2>
+        <p>
+            For inquiries, support, or refund requests, please reach out to us through the following:
+        </p>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li><b>Email:</b> bareeyinc@gmail.com</li>
+            <li><b>Phone:</b> +234 9021388401</li>
+            <li><b>Business Address:</b> Hayin banki kawo kaduna state </li>
+        </ul>
     </section>
 </div>

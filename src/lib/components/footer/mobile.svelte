@@ -1,108 +1,72 @@
 <script>
-    // Assuming you might need the current year for a copyright notice
-    const currentYear = new Date().getFullYear();
-
-    // Define the application name from your header
-    const appName = "Bareey";
+  import { Smartphone, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-svelte';
+  const currentYear = new Date().getFullYear();
 </script>
 
-<footer class="app-footer">
-    <div class="footer-content">
-        <div class="footer-brand">
-            <span class="norican-text">{appName}</span>
-            <p class="tagline">Connecting communities, one chat at a time.</p>
+<footer class="bg-white border-t border-gray-100 pt-20 pb-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      <!-- Brand & Description -->
+      <div class="space-y-6">
+        <a href="/" class="text-4xl font-logo text-blue-600">Bareey</a>
+        <p class="text-gray-500 leading-relaxed">
+          The trusted marketplace platform for buying, selling, and accessing professional services within your community.
+        </p>
+        <div class="flex gap-4">
+          <a href="/" class="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center text-gray-400 hover:bg-blue-50 hover:text-blue-600 transition-all"><Facebook class="w-5 h-5" /></a>
+          <a href="/" class="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center text-gray-400 hover:bg-blue-50 hover:text-blue-600 transition-all"><Twitter class="w-5 h-5" /></a>
+          <a href="/" class="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center text-gray-400 hover:bg-blue-50 hover:text-blue-600 transition-all"><Instagram class="w-5 h-5" /></a>
+          <a href="/" class="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center text-gray-400 hover:bg-blue-50 hover:text-blue-600 transition-all"><Linkedin class="w-5 h-5" /></a>
         </div>
+      </div>
 
-        <div class="footer-links">
-            <a href="/check/privacy#privacy-policy">Privacy Policy</a>
-            <a href="/check/privacy#terms">Terms & Conditions</a>
-            <a href="/check/privacy#refund-policy">Refund Policy</a>
-            <a href="/check/privacy#about-bareey">About {appName}</a>
-            <a href="/check/privacy#contact">Contact</a>
-        </div>
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+        <ul class="space-y-4">
+          <li><a href="/#features" class="text-gray-500 hover:text-blue-600 transition-colors">Features</a></li>
+          <li><a href="/#how-it-works" class="text-gray-500 hover:text-blue-600 transition-colors">How it Works</a></li>
+          <li><a href="/#faq" class="text-gray-500 hover:text-blue-600 transition-colors">FAQ</a></li>
+          <li><a href="/#about" class="text-gray-500 hover:text-blue-600 transition-colors">About Us</a></li>
+          <li><a href="/#contact" class="text-gray-500 hover:text-blue-600 transition-colors">Contact</a></li>
+        </ul>
+      </div>
 
-        <div class="footer-copyright">
-            &copy; {currentYear} {appName} Inc. All rights reserved.
-        </div>
+      <!-- Legal -->
+      <div>
+        <h4 class="text-lg font-bold mb-6">Legal</h4>
+        <ul class="space-y-4">
+          <li><a href="/privacy" class="text-gray-500 hover:text-blue-600 transition-colors">Privacy Policy</a></li>
+          <li><a href="/terms" class="text-gray-500 hover:text-blue-600 transition-colors">Terms of Service</a></li>
+          <li><a href="/privacy#refund" class="text-gray-500 hover:text-blue-600 transition-colors">Refund Policy</a></li>
+          <li><a href="/privacy#data" class="text-gray-500 hover:text-blue-600 transition-colors">Data Deletion</a></li>
+        </ul>
+      </div>
+
+      <!-- Download -->
+      <div>
+        <h4 class="text-lg font-bold mb-6">Get the App</h4>
+        <p class="text-gray-500 mb-6">Download our Android app for the best experience.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.bareeyinc.bareey" target="_blank" class="inline-flex items-center px-6 py-3 bg-black text-white rounded-xl font-bold hover:bg-gray-800 transition-all w-full justify-center gap-2">
+          <Smartphone class="w-5 h-5" /> Play Store
+        </a>
+      </div>
     </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+      <p>© {currentYear} Bareey Inc. All rights reserved.</p>
+      <div class="flex gap-8">
+        <a href="/privacy" class="hover:text-blue-600 transition-colors">Privacy</a>
+        <a href="/terms" class="hover:text-blue-600 transition-colors">Terms</a>
+        <a href="/#contact" class="hover:text-blue-600 transition-colors">Support</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <style>
-    /*
-     * The footer is designed to be pushed to the bottom of the page content,
-     * not necessarily fixed at the bottom of the screen (unlike your bottom-nav).
-     */
-    .app-footer {
-        background-color: #f9f9f9;
-        color: #333;
-        padding: 30px 20px;
-        text-align: center;
-    }
-
-    .footer-content {
-       
-        margin: 0 auto;
-    }
-
-    /* Reuse the stylish font from your header */
-    .norican-text {
-        font-family: 'Norican', cursive;
-        font-size: 30px;
-        letter-spacing: 1.5px;
-        color: #000; /* Use a strong color for the brand name */
-        display: block; /* Make it take up its own line */
-        margin-bottom: 5px;
-    }
-
-    .tagline {
-        font-size: 14px;
-        color: #666;
-        margin: 0 0 20px 0;
-    }
-
-    .footer-links {
-        display: flex;
-        flex-direction: column; /* Stack links vertically for mobile */
-        gap: 10px;
-        margin-bottom: 20px;
-        padding: 0 10%; /* Add horizontal padding to center the links */
-    }
-
-    .footer-links a {
-        color: #007bff; /* A standard blue for links */
-        text-decoration: none;
-        font-size: 15px;
-        padding: 5px 0;
-        border-bottom: 1px dashed #ccc; /* Subtle separation for stacked links */
-        transition: color 0.2s;
-    }
-
-    .footer-links a:last-child {
-        border-bottom: none; /* Remove the dashed line on the last link */
-    }
-
-    .footer-links a:hover {
-        color: #0056b3;
-    }
-
-    .footer-copyright {
-        font-size: 13px;
-        color: #888;
-        padding-top: 10px;
-    }
-
-    /* Desktop/Tablet view: Arrange links horizontally */
-    @media (min-width: 600px) {
-        .footer-links {
-            flex-direction: row; /* Change to horizontal on wider screens */
-            justify-content: center;
-            gap: 25px;
-            padding: 0;
-        }
-
-        .footer-links a {
-            border-bottom: none; /* Remove dashed line when horizontal */
-            padding: 0;
-        }
-    }
+  .font-logo {
+    font-family: 'Norican', cursive;
+  }
 </style>

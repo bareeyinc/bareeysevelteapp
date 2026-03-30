@@ -1,72 +1,27 @@
 <script>
-  import { Smartphone, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-svelte';
   const currentYear = new Date().getFullYear();
 </script>
 
-<footer class="bg-white border-t border-gray-100 pt-20 pb-10">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-      <!-- Brand & Description -->
-      <div class="space-y-6">
-        <a href="/" class="text-4xl font-logo text-blue-600">Bareey</a>
-        <p class="text-gray-500 leading-relaxed">
-          The trusted marketplace platform for buying, selling, and accessing professional services within your community.
-        </p>
-        <div class="flex gap-4">
-          <a href="/" class="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center text-gray-400 hover:bg-blue-50 hover:text-blue-600 transition-all"><Facebook class="w-5 h-5" /></a>
-          <a href="/" class="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center text-gray-400 hover:bg-blue-50 hover:text-blue-600 transition-all"><Twitter class="w-5 h-5" /></a>
-          <a href="/" class="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center text-gray-400 hover:bg-blue-50 hover:text-blue-600 transition-all"><Instagram class="w-5 h-5" /></a>
-          <a href="/" class="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center text-gray-400 hover:bg-blue-50 hover:text-blue-600 transition-all"><Linkedin class="w-5 h-5" /></a>
-        </div>
-      </div>
-
-      <!-- Quick Links -->
+<footer class="bg-gray-900 text-white py-16 px-4">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-3 gap-12 mb-12">
       <div>
-        <h4 class="text-lg font-bold mb-6">Quick Links</h4>
-        <ul class="space-y-4">
-          <li><a href="/#features" class="text-gray-500 hover:text-blue-600 transition-colors">Features</a></li>
-          <li><a href="/#how-it-works" class="text-gray-500 hover:text-blue-600 transition-colors">How it Works</a></li>
-          <li><a href="/#faq" class="text-gray-500 hover:text-blue-600 transition-colors">FAQ</a></li>
-          <li><a href="/#about" class="text-gray-500 hover:text-blue-600 transition-colors">About Us</a></li>
-          <li><a href="/#contact" class="text-gray-500 hover:text-blue-600 transition-colors">Contact</a></li>
-        </ul>
+        <h4 class="font-black text-lg mb-4">Contact</h4>
+        <p class="text-gray-400 mb-2">support@bareey.com</p>
+        <p class="text-gray-400">+234 902 138 8401</p>
       </div>
-
-      <!-- Legal -->
       <div>
-        <h4 class="text-lg font-bold mb-6">Legal</h4>
-        <ul class="space-y-4">
-          <li><a href="/privacy" class="text-gray-500 hover:text-blue-600 transition-colors">Privacy Policy</a></li>
-          <li><a href="/terms" class="text-gray-500 hover:text-blue-600 transition-colors">Terms of Service</a></li>
-          <li><a href="/privacy#refund" class="text-gray-500 hover:text-blue-600 transition-colors">Refund Policy</a></li>
-          <li><a href="/privacy#data" class="text-gray-500 hover:text-blue-600 transition-colors">Data Deletion</a></li>
-        </ul>
+        <h4 class="font-black text-lg mb-4">Location</h4>
+        <p class="text-gray-400">Nda Oldsite, Kawo<br>Kaduna State, Nigeria</p>
       </div>
-
-      <!-- Download -->
       <div>
-        <h4 class="text-lg font-bold mb-6">Get the App</h4>
-        <p class="text-gray-500 mb-6">Download our Android app for the best experience.</p>
-        <a href="https://play.google.com/store/apps/details?id=com.bareeyinc.bareey" target="_blank" class="inline-flex items-center px-6 py-3 bg-black text-white rounded-xl font-bold hover:bg-gray-800 transition-all w-full justify-center gap-2">
-          <Smartphone class="w-5 h-5" /> Play Store
-        </a>
+        <h4 class="font-black text-lg mb-4">Legal</h4>
+        <a href="/privacy" class="text-gray-400 hover:text-white block mb-2">Privacy Policy</a>
+        <a href="/terms" class="text-gray-400 hover:text-white block">Terms of Service</a>
       </div>
     </div>
-
-    <!-- Bottom Bar -->
-    <div class="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
-      <p>© {currentYear} Bareey Inc. All rights reserved.</p>
-      <div class="flex gap-8">
-        <a href="/privacy" class="hover:text-blue-600 transition-colors">Privacy</a>
-        <a href="/terms" class="hover:text-blue-600 transition-colors">Terms</a>
-        <a href="/#contact" class="hover:text-blue-600 transition-colors">Support</a>
-      </div>
+    <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+      <p>&copy; {currentYear} Bareey Inc. All rights reserved.</p>
     </div>
   </div>
 </footer>
-
-<style>
-  .font-logo {
-    font-family: 'Norican', cursive;
-  }
-</style>

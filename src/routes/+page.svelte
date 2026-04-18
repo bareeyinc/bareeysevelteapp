@@ -33,7 +33,7 @@
     {
       icon: Rocket,
       title: 'MVP Stage',
-      text: 'We have built a working MVP and are refining it toward stronger validation, adoption and scale readiness.'
+      text: 'We have built a working MVP and are refining it toward stronger validation, adoption and readiness for growth.'
     }
   ];
 
@@ -108,7 +108,7 @@
     {
       step: '03',
       title: 'Grow with support',
-      text: 'With the right backing, Bareey can deepen validation, improve usability and prepare for broader scale.'
+      text: 'With the right backing, Bareey can deepen validation, improve usability and prepare for stronger growth readiness.'
     }
   ];
 
@@ -150,7 +150,7 @@
             Building a simpler and safer way to trade across Nigeria
           </h1>
           <p class="text-lg md:text-xl text-gray-600 max-w-2xl leading-relaxed">
-            Bareey is a growing commerce platform that combines products, local market goods and service providers in one experience. Our MVP is already live, and we are refining it for stronger adoption, trust and scale.
+            Bareey is a growing commerce platform that combines products, local market goods and service providers in one experience. Our MVP is already live, and we are refining it for stronger validation, trust and readiness for growth.
           </p>
         </div>
 
@@ -197,8 +197,8 @@
 
               <div class="rounded-2xl bg-white/10 border border-white/10 p-4">
                 <p class="text-sm text-gray-300">Current stage</p>
-                <p class="text-lg font-semibold">Working MVP, improving toward scale</p>
-                <p class="text-sm text-gray-400 mt-2">The product is live today and ready for refinement, validation and broader market expansion.</p>
+                <p class="text-lg font-semibold">Working MVP, improving toward stronger validation</p>
+                <p class="text-sm text-gray-400 mt-2">The product is live today and ready for refinement, validation and broader market learning.</p>
               </div>
 
               <div class="grid grid-cols-2 gap-4">

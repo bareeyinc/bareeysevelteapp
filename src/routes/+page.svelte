@@ -4,7 +4,6 @@
     Shield,
     MessageCircle,
     ArrowRight,
-    CheckCircle,
     Store,
     ShoppingBag,
     Briefcase,
@@ -12,29 +11,50 @@
     MapPin,
     BadgeCheck,
     Wallet,
-    Star
+    Star,
+    Lightbulb,
+    Rocket,
+    Layers
   } from 'lucide-svelte';
+
+  const progressItems = [
+    {
+      icon: Lightbulb,
+      title: 'Problem',
+      text: 'Buying and selling through informal channels is often fragmented, risky and difficult to manage.'
+    },
+    {
+      icon: Layers,
+      title: 'Solution',
+      text: 'Bareey combines products, local market trade and service discovery in one growing platform.'
+    },
+    {
+      icon: Rocket,
+      title: 'MVP Stage',
+      text: 'We have built a working MVP and are refining it toward stronger validation, adoption and scale readiness.'
+    }
+  ];
 
   const trustItems = [
     {
       icon: Shield,
-      title: 'Protected Payments',
-      text: 'Your money stays protected until the transaction is completed.'
+      title: 'Protected Transactions',
+      text: 'Bareey is building a safer way for users to buy, sell and complete transactions with more confidence.'
     },
     {
       icon: BadgeCheck,
-      title: 'Verified Users',
-      text: 'Buy from trusted sellers and connect with reliable service providers.'
+      title: 'Structured Commerce Flow',
+      text: 'We are moving trade away from scattered chats into a clearer and more organized experience.'
     },
     {
       icon: MessageCircle,
-      title: 'Real-Time Chat',
-      text: 'Chat directly with buyers, sellers and service providers when it matters.'
+      title: 'Real-Time Communication',
+      text: 'Users can interact directly with sellers and service providers when decisions need to happen fast.'
     },
     {
       icon: Wallet,
-      title: 'Fast Payouts',
-      text: 'Sellers and service providers get paid quickly after successful delivery.'
+      title: 'Built for Trust and Growth',
+      text: 'Our MVP focuses on solving trust, clarity and payment coordination for Nigerian commerce.'
     }
   ];
 
@@ -42,35 +62,35 @@
     {
       icon: ShoppingBag,
       title: 'Marketplace',
-      text: 'Shop phones, electronics, fashion, furniture and thousands of everyday products.'
+      text: 'A structured place to buy and sell products such as phones, electronics, fashion, furniture and everyday items.'
     },
     {
       icon: Store,
       title: 'Local Market',
-      text: 'Buy beans, maize, dry fish and local essentials from trusted sellers near you.'
+      text: 'A dedicated space for local goods such as beans, maize, dry fish and other market essentials often ignored by modern platforms.'
     },
     {
       icon: Briefcase,
       title: 'Services',
-      text: 'Book trusted printers, tailors, designers, repairers and other professionals.'
+      text: 'A service layer where users can discover and book trusted providers such as printers, tailors, designers and repairers.'
     }
   ];
 
   const howItWorks = [
     {
       step: '01',
-      title: 'Create an account',
-      text: 'Join Bareey in seconds and start exploring products and services.'
+      title: 'Explore the product',
+      text: 'Understand how Bareey brings marketplace listings, local trade and services into one product experience.'
     },
     {
       step: '02',
-      title: 'Buy, sell or book',
-      text: 'Find what you need, post your products or book a trusted provider.'
+      title: 'See the MVP in action',
+      text: 'The MVP is already live and demonstrates the core experience we are building for Nigerian users.'
     },
     {
       step: '03',
-      title: 'Pay securely',
-      text: 'Bareey helps protect payments while transactions are being completed.'
+      title: 'Grow with support',
+      text: 'With the right backing, Bareey can deepen validation, improve usability and prepare for broader scale.'
     }
   ];
 
@@ -79,19 +99,19 @@
       name: 'Ibrahim',
       role: 'Seller',
       location: 'Kaduna',
-      text: 'I sold my first phone in 2 days and the process felt simple and secure.'
+      text: 'Bareey feels more organized than selling through random chats. It gives the process more structure.'
     },
     {
       name: 'Amina',
       role: 'Buyer',
       location: 'Abuja',
-      text: 'Bareey feels more organized than random social media selling. I can actually trust the process.'
+      text: 'What stood out to me is that it is trying to make local buying and selling feel more trustworthy.'
     },
     {
       name: 'Usman',
-      role: 'Printing Service Provider',
+      role: 'Service Provider',
       location: 'Kaduna',
-      text: 'It gives my business a more professional way to get customer requests and bookings.'
+      text: 'It gives service providers a more professional way to be seen and contacted by customers.'
     }
   ];
 </script>
@@ -104,39 +124,32 @@
       <div class="space-y-8">
         <div class="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm">
           <BadgeCheck class="w-4 h-4 text-green-600" />
-          Trusted marketplace experience for products, local goods and services
+          Working MVP for products, local market trade and trusted services
         </div>
 
         <div class="space-y-5">
           <h1 class="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.98] text-gray-950">
-            Buy, sell and book trusted services across Nigeria
+            Building a simpler and safer way to trade across Nigeria
           </h1>
           <p class="text-lg md:text-xl text-gray-600 max-w-2xl leading-relaxed">
-            Bareey brings products, local market goods and trusted service providers together in one secure app. Buy safely, sell confidently and grow faster.
+            Bareey is a growing commerce platform that combines products, local market goods and service providers in one experience. Our MVP is already live, and we are refining it for stronger adoption, trust and scale.
           </p>
         </div>
 
         <div class="flex flex-col sm:flex-row gap-4">
-          <a
-            href="https://play.google.com/store/apps/details?id=com.bareeyinc.bareey"
-            target="_blank"
-            class="px-8 py-4 bg-gray-950 text-white rounded-2xl font-semibold text-lg hover:-translate-y-0.5 transition-all shadow-lg flex items-center justify-center gap-2"
-          >
-            <Download class="w-5 h-5" /> Download the App
+          <a href="#product-overview" class="px-8 py-4 bg-gray-950 text-white rounded-2xl font-semibold text-lg hover:-translate-y-0.5 transition-all shadow-lg flex items-center justify-center gap-2">
+            View Product Overview <ArrowRight class="w-5 h-5" />
           </a>
-          <a
-            href="#how-it-works"
-            class="px-8 py-4 bg-white border border-gray-300 text-gray-900 rounded-2xl font-semibold text-lg hover:bg-gray-50 transition-all flex items-center justify-center gap-2"
-          >
-            How Bareey Works <ArrowRight class="w-5 h-5" />
+          <a href="https://play.google.com/store/apps/details?id=com.bareeyinc.bareey" target="_blank" class="px-8 py-4 bg-white border border-gray-300 text-gray-900 rounded-2xl font-semibold text-lg hover:bg-gray-50 transition-all flex items-center justify-center gap-2">
+            <Download class="w-5 h-5" /> Try the MVP
           </a>
         </div>
 
         <div class="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-gray-600 pt-1">
-          <span class="flex items-center gap-2"><Shield class="w-4 h-4 text-green-600" /> Protected payments</span>
-          <span class="flex items-center gap-2"><BadgeCheck class="w-4 h-4 text-green-600" /> Verified users</span>
-          <span class="flex items-center gap-2"><MessageCircle class="w-4 h-4 text-green-600" /> Real-time chat</span>
-          <span class="flex items-center gap-2"><Wallet class="w-4 h-4 text-green-600" /> Fast payouts</span>
+          <span class="flex items-center gap-2"><BadgeCheck class="w-4 h-4 text-green-600" /> Working MVP</span>
+          <span class="flex items-center gap-2"><Shield class="w-4 h-4 text-green-600" /> Trust-focused flows</span>
+          <span class="flex items-center gap-2"><MessageCircle class="w-4 h-4 text-green-600" /> Products and services</span>
+          <span class="flex items-center gap-2"><Wallet class="w-4 h-4 text-green-600" /> Built for validation and growth</span>
         </div>
       </div>
 
@@ -145,54 +158,39 @@
           <div class="rounded-[1.6rem] bg-gray-950 p-5 md:p-6 text-white space-y-5 min-h-[520px]">
             <div class="flex items-center justify-between">
               <div>
-                <p class="text-sm text-gray-400">Bareey App Preview</p>
-                <h2 class="text-2xl font-bold">Everything in one place</h2>
+                <p class="text-sm text-gray-400">Bareey MVP</p>
+                <h2 class="text-2xl font-bold">From idea to usable product</h2>
               </div>
               <Smartphone class="w-8 h-8 text-green-400" />
             </div>
 
             <div class="grid gap-4">
               <div class="rounded-2xl bg-white/10 border border-white/10 p-4">
-                <div class="flex items-start justify-between gap-3">
-                  <div>
-                    <p class="text-sm text-gray-300">Marketplace</p>
-                    <p class="text-lg font-semibold">Shop products with confidence</p>
-                  </div>
-                  <ShoppingBag class="w-5 h-5 text-green-400" />
-                </div>
-                <p class="text-sm text-gray-400 mt-2">Phones, fashion, electronics, furniture and more.</p>
+                <p class="text-sm text-gray-300">What we are building</p>
+                <p class="text-lg font-semibold">One platform, multiple commerce layers</p>
+                <p class="text-sm text-gray-400 mt-2">Marketplace listings, local market items and trusted service discovery in one flow.</p>
               </div>
 
               <div class="rounded-2xl bg-white/10 border border-white/10 p-4">
-                <div class="flex items-start justify-between gap-3">
-                  <div>
-                    <p class="text-sm text-gray-300">Local Market</p>
-                    <p class="text-lg font-semibold">Find everyday essentials</p>
-                  </div>
-                  <Store class="w-5 h-5 text-green-400" />
-                </div>
-                <p class="text-sm text-gray-400 mt-2">Local foods and market items from trusted sellers near you.</p>
+                <p class="text-sm text-gray-300">Why it matters</p>
+                <p class="text-lg font-semibold">Commerce still lacks structure and trust</p>
+                <p class="text-sm text-gray-400 mt-2">Bareey focuses on making buying, selling and service booking feel safer and more organized.</p>
               </div>
 
               <div class="rounded-2xl bg-white/10 border border-white/10 p-4">
-                <div class="flex items-start justify-between gap-3">
-                  <div>
-                    <p class="text-sm text-gray-300">Services</p>
-                    <p class="text-lg font-semibold">Book verified professionals</p>
-                  </div>
-                  <Briefcase class="w-5 h-5 text-green-400" />
-                </div>
-                <p class="text-sm text-gray-400 mt-2">Printers, tailors, repairers, designers and more.</p>
+                <p class="text-sm text-gray-300">Current stage</p>
+                <p class="text-lg font-semibold">Working MVP, improving toward scale</p>
+                <p class="text-sm text-gray-400 mt-2">The product is live today and ready for refinement, validation and broader market expansion.</p>
               </div>
 
               <div class="grid grid-cols-2 gap-4">
                 <div class="rounded-2xl bg-green-500/10 border border-green-400/20 p-4">
-                  <p class="text-sm text-green-300">Trust signal</p>
-                  <p class="font-semibold mt-1">Protected payment flow</p>
+                  <p class="text-sm text-green-300">Focus</p>
+                  <p class="font-semibold mt-1">Trust, usability and adoption</p>
                 </div>
                 <div class="rounded-2xl bg-white/10 border border-white/10 p-4">
-                  <p class="text-sm text-gray-300">Communication</p>
-                  <p class="font-semibold mt-1">Real-time chat & order updates</p>
+                  <p class="text-sm text-gray-300">Proof</p>
+                  <p class="font-semibold mt-1">MVP available on Google Play</p>
                 </div>
               </div>
             </div>
@@ -202,9 +200,9 @@
     </div>
   </section>
 
-  <section class="px-4 py-8 md:py-10 bg-white">
-    <div class="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-      {#each trustItems as item}
+  <section id="product-overview" class="px-4 py-8 md:py-10 bg-white">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-4">
+      {#each progressItems as item}
         <div class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
           <svelte:component this={item.icon} class="w-7 h-7 text-green-600 mb-4" />
           <h3 class="text-lg font-bold mb-2">{item.title}</h3>
@@ -217,10 +215,10 @@
   <section class="px-4 py-20 md:py-24 bg-gray-50">
     <div class="max-w-6xl mx-auto space-y-14">
       <div class="max-w-3xl">
-        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-green-700 mb-4">Explore Bareey</p>
-        <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-4">Everything you need, all in one place</h2>
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-green-700 mb-4">Platform overview</p>
+        <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-4">A broader commerce model than a typical marketplace</h2>
         <p class="text-lg text-gray-600 leading-relaxed">
-          Whether you want to buy products, shop local goods or book trusted services, Bareey gives you one clear platform to do it all.
+          Bareey is not only about product listings. It is designed to support formal and informal trade across multiple categories that matter in everyday Nigerian commerce.
         </p>
       </div>
 
@@ -233,7 +231,7 @@
             <h3 class="text-2xl font-black mb-3">{item.title}</h3>
             <p class="text-gray-600 leading-relaxed mb-8">{item.text}</p>
             <div class="flex items-center gap-2 text-green-700 font-semibold">
-              Explore <ArrowRight class="w-4 h-4" />
+              Learn more <ArrowRight class="w-4 h-4" />
             </div>
           </div>
         {/each}
@@ -241,13 +239,25 @@
     </div>
   </section>
 
+  <section class="px-4 py-10 md:py-12 bg-white">
+    <div class="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {#each trustItems as item}
+        <div class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+          <svelte:component this={item.icon} class="w-7 h-7 text-green-600 mb-4" />
+          <h3 class="text-lg font-bold mb-2">{item.title}</h3>
+          <p class="text-gray-600 leading-relaxed">{item.text}</p>
+        </div>
+      {/each}
+    </div>
+  </section>
+
   <section id="how-it-works" class="px-4 py-20 md:py-24 bg-white">
     <div class="max-w-6xl mx-auto">
       <div class="max-w-3xl mb-14">
-        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-green-700 mb-4">How it works</p>
-        <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-4">A simpler and safer way to trade</h2>
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-green-700 mb-4">Why now</p>
+        <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-4">A product with a clear next step</h2>
         <p class="text-lg text-gray-600 leading-relaxed">
-          Bareey is designed to make buying, selling and booking services feel more trustworthy, more organized and more professional.
+          Bareey has moved beyond idea stage. The goal now is to strengthen the product, validate usage more deeply and prepare for a more scalable rollout.
         </p>
       </div>
 
@@ -266,10 +276,10 @@
   <section class="px-4 py-20 md:py-24 bg-gray-950 text-white">
     <div class="max-w-6xl mx-auto">
       <div class="max-w-3xl mb-14">
-        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-green-400 mb-4">Why people choose Bareey</p>
-        <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-4">Built for trust, clarity and growth</h2>
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-green-400 mb-4">Early validation</p>
+        <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-4">Early reactions point to a real need</h2>
         <p class="text-lg text-gray-300 leading-relaxed">
-          People do not just want another listing site. They want a platform that feels safer, clearer and more serious.
+          These early impressions reflect why Bareey matters: people want a better structure for everyday trade and trusted service discovery.
         </p>
       </div>
 
@@ -295,24 +305,17 @@
 
   <section class="px-4 py-20 md:py-24 bg-white">
     <div class="max-w-5xl mx-auto rounded-[2.5rem] bg-gradient-to-br from-gray-950 via-gray-900 to-green-950 px-8 py-14 md:px-14 md:py-16 text-white text-center shadow-2xl">
-      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-green-300 mb-4">Start with Bareey</p>
-      <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-5">Ready to buy, sell or grow your business?</h2>
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-green-300 mb-4">Working MVP</p>
+      <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-5">See where Bareey is today</h2>
       <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed mb-10">
-        Join Bareey today and discover a more trusted way to trade products, local market items and services across Nigeria.
+        Bareey is already live as an MVP. Explore the product direction, understand the model and, if needed, try the current version on Google Play.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="https://play.google.com/store/apps/details?id=com.bareeyinc.bareey"
-          target="_blank"
-          class="px-8 py-4 bg-white text-gray-950 rounded-2xl font-semibold text-lg hover:bg-gray-100 transition-all"
-        >
-          Download on Google Play
+        <a href="#product-overview" class="px-8 py-4 bg-white text-gray-950 rounded-2xl font-semibold text-lg hover:bg-gray-100 transition-all">
+          Review Product Overview
         </a>
-        <a
-          href="mailto:support@bareey.com"
-          class="px-8 py-4 border border-white/20 text-white rounded-2xl font-semibold text-lg hover:bg-white/10 transition-all"
-        >
-          Contact Us
+        <a href="https://play.google.com/store/apps/details?id=com.bareeyinc.bareey" target="_blank" class="px-8 py-4 border border-white/20 text-white rounded-2xl font-semibold text-lg hover:bg-white/10 transition-all">
+          Try the MVP on Google Play
         </a>
       </div>
     </div>
@@ -323,14 +326,15 @@
       <div class="md:col-span-2">
         <h3 class="text-2xl font-black mb-4">Bareey</h3>
         <p class="text-gray-400 max-w-lg leading-relaxed">
-          Bareey is building a more trusted commerce experience where people can buy products, sell confidently and book reliable services in one place.
+          Bareey is building a more trusted commerce experience where people can buy products, trade local goods and connect with reliable service providers in one growing platform.
         </p>
       </div>
 
       <div>
         <h4 class="font-bold mb-4">Company</h4>
         <div class="space-y-3 text-gray-400">
-          <a href="#how-it-works" class="block hover:text-white transition-colors">How it works</a>
+          <a href="#product-overview" class="block hover:text-white transition-colors">Product overview</a>
+          <a href="#how-it-works" class="block hover:text-white transition-colors">Why now</a>
           <a href="/privacy" class="block hover:text-white transition-colors">Privacy Policy</a>
           <a href="/terms" class="block hover:text-white transition-colors">Terms of Service</a>
         </div>

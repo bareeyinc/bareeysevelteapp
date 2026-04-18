@@ -14,7 +14,9 @@
     Star,
     Lightbulb,
     Rocket,
-    Layers
+    Layers,
+    CheckCircle2,
+    Target
   } from 'lucide-svelte';
 
   const progressItems = [
@@ -33,6 +35,22 @@
       title: 'MVP Stage',
       text: 'We have built a working MVP and are refining it toward stronger validation, adoption and scale readiness.'
     }
+  ];
+
+  const builtSoFar = [
+    'A live MVP available on Google Play',
+    'Core marketplace flow for buying and selling products',
+    'A local market concept for everyday goods often underserved online',
+    'A service discovery layer for trusted providers',
+    'Trust-focused product direction around communication and transaction flow'
+  ];
+
+  const nextSteps = [
+    'Deeper user testing and validation across target communities',
+    'Better onboarding, trust and transaction experience',
+    'Stronger service-booking and local market usability',
+    'Improved product polish, reliability and retention',
+    'Readiness for broader market rollout and partnerships'
   ];
 
   const trustItems = [
@@ -209,6 +227,50 @@
           <p class="text-gray-600 leading-relaxed">{item.text}</p>
         </div>
       {/each}
+    </div>
+  </section>
+
+  <section class="px-4 py-10 md:py-12 bg-white">
+    <div class="max-w-6xl mx-auto rounded-[2.5rem] border border-gray-200 bg-gray-50 p-8 md:p-10 lg:p-12">
+      <div class="max-w-3xl mb-10">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-green-700 mb-4">Progress and next steps</p>
+        <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-4">What we have built so far, and what support unlocks next</h2>
+        <p class="text-lg text-gray-600 leading-relaxed">
+          Bareey has already moved from concept to usable product. The next phase is about sharpening the experience, validating it more deeply and preparing it for stronger market traction.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-6">
+        <div class="rounded-[2rem] bg-white border border-gray-200 p-8 shadow-sm">
+          <div class="flex items-center gap-3 mb-6">
+            <CheckCircle2 class="w-6 h-6 text-green-600" />
+            <h3 class="text-2xl font-black">Built so far</h3>
+          </div>
+          <div class="space-y-4">
+            {#each builtSoFar as item}
+              <div class="flex items-start gap-3 text-gray-700">
+                <CheckCircle2 class="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
+                <p class="leading-relaxed">{item}</p>
+              </div>
+            {/each}
+          </div>
+        </div>
+
+        <div class="rounded-[2rem] bg-gray-950 text-white border border-gray-900 p-8 shadow-sm">
+          <div class="flex items-center gap-3 mb-6">
+            <Target class="w-6 h-6 text-green-400" />
+            <h3 class="text-2xl font-black">Support unlocks next</h3>
+          </div>
+          <div class="space-y-4">
+            {#each nextSteps as item}
+              <div class="flex items-start gap-3 text-gray-200">
+                <ArrowRight class="w-5 h-5 text-green-400 shrink-0 mt-0.5" />
+                <p class="leading-relaxed">{item}</p>
+              </div>
+            {/each}
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
